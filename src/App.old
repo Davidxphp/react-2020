@@ -1,0 +1,60 @@
+// function App() {
+//   return (
+//     <h1>Hello APP</h1>
+//   )
+// }
+
+// function ComponenteFuncional() {
+//   return (
+//     <h1>Hello APP</h1>
+//   )
+// }
+
+/*
+/ compomentes de classe
+
+class App extends React.Component {
+
+  state = {
+    nome: 'Dav'
+  }
+
+  modificarNome = (event) => {
+   let nome = event.target.value;
+   this.setState({
+     nome: nome
+   })
+  }
+
+  criaComboBox = () => {
+    const opcoes = [ "David", "Rose", "Bela", "Raquel"]
+    const criaComboBoxOpcoes = opcoes.map( opcao => <option>{opcao}</option>)
+
+    return (
+      <select>
+        { criaComboBoxOpcoes }
+      </select>
+    )
+  }
+
+  componentDidMount(){
+    console.log("Executou o componentDidMount 1")
+  }
+  render(){
+    console.log("Executou o componentDidMount 2")
+    
+    const MeuComboBox = () => this.criaComboBox()
+
+    return ( 
+      <>
+        <input type="text" value={this.state.nome} onChange={ this.modificarNome }/>
+        {/* <h1>Hello { this.state.nome }</h1> */}
+
+        // <h1>Hello { this.props.nome } sua idade é {this.props.idade}</h1>
+        // <MeuComboBox />
+      // </>
+    // )  
+  // }
+// }
+
+// export default App;
